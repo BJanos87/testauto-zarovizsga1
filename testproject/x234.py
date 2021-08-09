@@ -40,7 +40,7 @@ try:
     input_field_b.send_keys("")
     submit_btn.click()
     time.sleep(0.5)
-    assert result_field.text == "NanN"
+    assert result_field.text == "NaN"
     input_field_a.clear()
     input_field_b.clear()
 
