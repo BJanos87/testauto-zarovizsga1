@@ -1,7 +1,6 @@
 # Szükséges komponensek beimportálása
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 import time
 
 # Driver felparaméterezése
@@ -26,7 +25,7 @@ try:
     input_field_a.clear()
     input_field_b.clear()
 
-    #TC 02
+    # TC02
     input_field_a.send_keys("kiskutya")
     input_field_b.send_keys(12)
     submit_btn.click()
@@ -35,7 +34,7 @@ try:
     input_field_a.clear()
     input_field_b.clear()
 
-    #TC 03
+    # TC 03
     input_field_a.send_keys("")
     input_field_b.send_keys("")
     submit_btn.click()
@@ -50,9 +49,3 @@ except AssertionError as err:
 finally:
     driver.close()
     driver.quit()
-
-
-
-
-
-
