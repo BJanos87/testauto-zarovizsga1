@@ -20,15 +20,14 @@ try:
     text_field_list = text_field.text.replace('"', '').replace(', ', ',').split(',')
 
     # Az oldal alsó részében található felsorolt nevek egy listába konvertálása
-    city_string = ""
+    city_list = []
     for city in cities_list:
-        city_string = city_string + city.text + ','
-    city_string_list = city_string.split(',')
+        city_list.append(city.text)
 
     # Végigiterálás az elemeken és a két lista összehasonlítása,
     # majd a különbség bevitele a mezőbe
     for city in text_field_list:
-        if city in city_string_list:
+        if city in city_list:
             continue
         else:
             missing_city = city
