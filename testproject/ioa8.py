@@ -71,7 +71,7 @@ try:
         python_division(python_num1, python_num2)
 
     # Python által kiszámított eredmény kiiratása
-    print(result)
+    print(f'Eredmény:{result}')
 
     # Oldalon megjelenítésre került eredmény összehasonlítás a Python-nal számított eredménnyel
     assert str(result) == result_web.text
