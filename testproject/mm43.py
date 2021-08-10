@@ -24,7 +24,8 @@ try:
     email_field.send_keys(test_data)
     submit_btn.click()
     time.sleep(1)
-    # assert driver.find_element_by_xpath("/html/body/div/div/form/div").is_displayed() == False
+    empty_msg_field = driver.find_elements_by_xpath("/html/body/div/div/form/div")
+    assert len(empty_msg_field) == 0
     email_field.clear()
 
     # TC02
